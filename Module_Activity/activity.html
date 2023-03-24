@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- personal css -->
+    <link rel="stylesheet" href="./css/style.css">
+        <!-- main css -->
+        <link rel="stylesheet" href="../main css/main.css">
+        <!-- bootstrap css -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        
+	<title>Graph Report</title>
+</head>
+<body>
+    <header>
+<nav>
+    <a href="../index.html">Home</a> |
+    <a href="../Enrolment_Methods/enrole.html">Enrolment Methods Report</a> |
+    <a href="./activity.html">Activity Report</a>
+</nav>
+    </header>
+
+    <main>
+           <!-- Class Sessions -->
+        <div class="container pb-5">
+            <div class="row justify-content-center text-center">
+                <div class="col-sm-12">
+                    <h1>Business Communication Skills - MBA 2023 Blended (Activities Report)</h1>
+                    <h2>Class Sessions</h2>
+                    <br>
+                    <h3>Total Users: 114</h3>
+                    <p>*Hover over a bar to get more info*</p>
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+        </div>
+      <!-- Assignments -->
+        <div class="container pt-5">
+            <div class="row justify-content-center text-center">
+                <div class="col-sm-12">
+                    <h1>Business Communication Skills - MBA 2023 Blended (Activities Report)</h1>
+                    <h2>Assignments</h2>
+                    <br>
+                    <h3>Total Users: 114</h3>
+                    <p>*Hover over a bar to get more info*</p>
+                    <canvas id="myChart2"></canvas>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-sm-12">
+                    <p>Made by Shane Stevens @Stellenbosch Bussiness School | 2023</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Class Sessions -->
+	<script>
+		var ctx = document.getElementById('myChart').getContext('2d');
+		var myChart = new Chart(ctx, {
+			type: 'bar',
+			data: {
+				labels: ['Announcements', '2023 MBA_Module Outline_Business Communication Skills', 'MBA Instructions McGraw-Hill Create Ebooks', 'GrammarCheck: Infographics', 'BCS Session 1: Class Presentation', 'BCS Session 2: Class presentation', 'BCS Session 3: Class Presentation', 'Writing argumentatively', 'Scientific writing', 'Reflective writing', 'The Economist Style Guide', 'Business Writing', '2023 MBA BCS Session 4 - Class Presentation'],
+				datasets: [{
+					label: 'This Graph displays the number of users that accesed a specific file',
+					data: [82, 114, 103, 74, 97, 96, 97, 93, 76, 47, 74, 63, 94],
+					backgroundColor: [
+						'rgba(255, 99, 132, 0.2)',
+						'rgba(54, 162, 235, 0.2)',
+						'rgba(255, 206, 86, 0.2)',
+						'rgba(75, 192, 192, 0.2)',
+						'rgba(153, 102, 255, 0.2)',
+						'rgba(255, 159, 64, 0.2)',
+						'rgba(255, 99, 132, 0.2)',
+						'rgba(54, 162, 235, 0.2)',
+						'rgba(255, 206, 86, 0.2)',
+						'rgba(75, 192, 192, 0.2)',
+						'rgba(153, 102, 255, 0.2)',
+						'rgba(255, 159, 64, 0.2)',
+						'rgba(255, 99, 132, 0.2)'
+					],
+					borderColor: [
+                    'rgba(255, 99, 132, 1)',
+							'rgba(54, 162, 235, 1)',
+							'rgba(255, 206, 86, 1)',
+							'rgba(75, 192, 192, 1)',
+							'rgba(153, 102, 255, 1)',
+							'rgba(255, 159, 64, 1)',
+							'rgba(255, 99, 132, 1)',
+							'rgba(54, 162, 235, 1)',
+							'rgba(255, 206, 86, 1)',
+							'rgba(75, 192, 192, 1)',
+							'rgba(153, 102, 255, 1)',
+							'rgba(255, 159, 64, 1)',
+							'rgba(255, 99, 132, 1)'
+                        ],
+					borderWidth: 1
+				}]
+			},
+			options: {
+				scales: {
+					y: {
+						beginAtZero: true
+					}
+				}
+			}
+		});
+        </script>
+        <!-- Assignments -->
+        <script>
+            var ctx = document.getElementById('myChart2').getContext('2d');
+            var myChart2 = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Total Users', 'Individual Assessment: Oral Presentation Grading Rubric Upload- 28 January 2023', 'Presentations (Individual oral assessment): Programme 28 January 2023', 'Individual assessment grading matrix (oral presentation)', 'MBA 2023 Oral Presentation Grading Rubric', 'Individual assignment: Written executive summary - 20 February 2023', 'Individual Assignment Grading Matrix: Executive Summary', 'Team assignment: Written argument - 27 March 2023', 'Team assignment grading matrix (written argument)'],
+                    datasets: [{
+                        label: 'This Graph displays the number of users that accesed a specific file',
+                        data: [114, 103, 90, 4, 99, 105, 93, 0, 2],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)',
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)',
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
+                    },
+                    legend: {
+                        display: false
+                    }
+                }
+            });
+        </script>
+        

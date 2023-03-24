@@ -1,0 +1,41 @@
+*{
+    font-family: roboto mono, raleway;
+}
+body{
+    background-color: antiquewhite;
+}
+
+main{
+    padding: 20px;
+    min-height: 100vh;
+    padding-bottom: 5vh;
+}
+
+footer{
+    padding: 10px;
+    border-top: grey 1px solid;
+}
+
+nav{
+    padding: 10px;
+    justify-content: center;
+    text-align: center;
+    color: black I !important;
+    border-bottom: grey 1px solid;
+}
+
+a{
+    color: black I !important;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover{
+    color: green;
+}
+
+.index_container{
+    padding-top: 25vh;
+    font-weight: bold;
+}

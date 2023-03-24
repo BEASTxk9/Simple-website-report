@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- personal css -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="../main css/main.css">
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<title>Graph Report</title>
+</head>
+<body>
+    <header>
+ <nav>
+    <a href="../index.html">Home</a> |
+    <a href="./enrole.html">Enrolment Methods Report</a> |
+    <a href="../Module_Activity/activity.html">Activity Report</a>
+ </nav>
+    </header>
+
+<main>
+    <div class="container">
+        <div class="row justify-content-center text-center">
+            <div class="col-sm-12">
+                <h1>Business Communication Skills - MBA 2023 Blended</h1>
+                <h2>Enrolment Methods</h2>
+                <br>
+                <h3>Total Users: 114</h3>
+                <p>*Hover over a bar to get more info*</p>
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    <div class="container">
+        <div class="row justify-content-center text-center">
+            <div class="col-sm-12">
+                <p>Made by Shane Stevens @Stellenbosch Bussiness School | 2023</p>
+            </div>
+        </div>
+    </div>
+</footer>
+   
+<!-- js links -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script>
+		let ctx = document.getElementById('myChart').getContext('2d');
+		let myChart = new Chart(ctx, {
+			type: 'bar',
+			data: {
+				labels: ['Manual enrolments', 'Self enrolment (Student)', 'Category enrolments', 'Cohort sync (2023 MBA Blended Other - Student)', 'Cohort sync (2023 MBA Blended - Student)'],
+				datasets: [{
+					label: 'This Graph displays the differnt Enrolment Methods used',
+					data: [22, 22, 2, 18, 89],
+					backgroundColor: [
+						'rgba(255, 99, 132, 0.2)',
+						'rgba(54, 162, 235, 0.2)',
+						'rgba(255, 206, 86, 0.2)',
+						'rgba(75, 192, 192, 0.2)',
+						'rgba(153, 102, 255, 0.2)'
+					],
+					borderColor: [
+						'rgba(255, 99, 132, 1)',
+						'rgba(54, 162, 235, 1)',
+						'rgba(255, 206, 86, 1)',
+						'rgba(75, 192, 192, 1)',
+						'rgba(153, 102, 255, 1)'
+					],
+					borderWidth: 1
+				}]
+			},
+			options: {
+				scales: {
+					y: {
+						beginAtZero: true
+					}
+				}
+			}
+		});
+	</script>
+</body>
+</html>
